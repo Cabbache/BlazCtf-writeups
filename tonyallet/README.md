@@ -110,12 +110,12 @@ After submitting the updated payload, our balance increases and we get the flag 
 ```
 
 ### A simpler alternative
-Instead of setting up a redirection, it was possible to instead add any GET parameter to the URL. This would have been enough to cause a browser to reload the page. The `<a>` tag in the payload would have looked like this:
-
+Instead of setting up a redirection, it was possible to instead add any GET parameter to the URL. This would have been enough to cause a browser to reload the page. The `<a>` tag in the payload would have changed from this
 ```html
 <a href="https://<our-controlled-server>" style="display: block; margin-top: -10px;">
 ```
 
+to this
 ```html
 <a href="https://tonyallet-us.ctf.so/?someparam=123#tgWebAppData=<our token>" style="display: block; margin-top: -10px;">
 ```
