@@ -108,3 +108,14 @@ After submitting the updated payload, our balance increases and we get the flag 
   "flag": "blaz{TGAPP_CAN_BE_HACKED_REALLY_BAD_:P}"
 }
 ```
+
+### A simpler alternative
+Instead of setting up a redirection, it was possible to instead add any GET parameter to the URL. This would have been enough to cause a browser to reload the page. The `<a>` tag in the payload would have looked like this:
+
+```html
+<a href="https://<our-controlled-server>" style="display: block; margin-top: -10px;">
+```
+
+```html
+<a href="https://tonyallet-us.ctf.so/?someparam=123#tgWebAppData=<our token>" style="display: block; margin-top: -10px;">
+```
